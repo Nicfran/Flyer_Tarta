@@ -90,13 +90,17 @@
             animation: fadeInScale 0.8s ease-out 0.2s both;
         }
 
-        .plate {
+       .plate-img {
             width: 100%;
             height: auto;
-            border-radius: 50%;
+            display: block;
+            /* Mantenemos la sombra sutil para integrarla al diseño */
+            border-radius: 50%; /* Si la imagen es circular o quieres ese efecto */
             box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.12),
-                0 10px 20px rgba(0, 0, 0, 0.08);
+                0 15px 35px rgba(139, 101, 64, 0.2),
+                0 5px 15px rgba(0, 0, 0, 0.08);
+            transform: rotate(-5deg); /* Un pequeño giro para darle dinamismo, opcional */
+            animation: fadeInScale 0.8s ease-out 0.2s both; /* Mantiene la animación original */
         }
 
         /* Decorative Elements */
