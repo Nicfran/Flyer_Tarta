@@ -67,7 +67,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 80px 30px 30px 30px;
+            padding: 60px 20px 20px 20px;
         }
 
         .product-image::before {
@@ -92,15 +92,13 @@
 
        .plate-img {
             width: 100%;
+            max-width: 320px; /* Evita que la foto sea gigante */
             height: auto;
             display: block;
-            /* Mantenemos la sombra sutil para integrarla al diseño */
-            border-radius: 50%; /* Si la imagen es circular o quieres ese efecto */
-            box-shadow: 
-                0 15px 35px rgba(139, 101, 64, 0.2),
-                0 5px 15px rgba(0, 0, 0, 0.08);
-            transform: rotate(-5deg); /* Un pequeño giro para darle dinamismo, opcional */
-            animation: fadeInScale 0.8s ease-out 0.2s both; /* Mantiene la animación original */
+            border-radius: 16px; /* Bordes suaves en lugar de un círculo perfecto */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeInScale 0.8s ease-out 0.2s both;
+            object-fit: contain; /* Asegura que la imagen se vea completa */
         }
 
         /* Decorative Elements */
@@ -444,8 +442,7 @@
             <div class="deco-circle c1"></div>
             <div class="deco-circle c2"></div>
             
-            <div class="plate-container">
-                <!-- Placeholder: Replace this SVG with actual product photo -->
+            <div class="plate-container" style="width: 100%; display: flex; justify-content: center;">
                 <img src="Tartas.png" alt="Tartitas Artesanales" class="plate-img">
                     <!-- Dark Slate Plate -->
                     <ellipse cx="200" cy="200" rx="190" ry="190" fill="#2a2a2a"/>
